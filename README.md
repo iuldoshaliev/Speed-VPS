@@ -1,20 +1,20 @@
 # SpeedVPS
 
-VPN client for Windows, built with Flutter and sing-box (VLESS + Reality).
+VPN-клиент для Windows, созданный на Flutter и sing-box (VLESS + Reality).
 
-## Features
+## Возможности
 
-- 4 live-switchable UI themes: Emerald, Black + Green, Mono Dark, Mono Light (sidebar theme picker, persisted in settings)
-- Connect / Servers / Subscription / Settings screens with glassmorphism design
-- VLESS+Reality config generator (`lib/vpn/config/config_generator.dart`)
-- sing-box binary resolver and runtime validation (`lib/vpn/services/singbox_binary_service.dart`)
-- Windows VPN runtime process manager (`lib/vpn/windows_vpn.dart`)
-- Split tunneling app discovery (`Get-StartApps`)
-- Server repository with CRUD/selection and latency probing
-- Session logging and centralized error model
-- Unit tests for config generation and Windows status parsing
+- 4 переключаемые на лету темы интерфейса: Emerald, Black + Green, Mono Dark, Mono Light (выбор темы на боковой панели, сохраняется в настройках)
+- Экраны Connect / Servers / Subscription / Settings в дизайне glassmorphism
+- Генератор конфигурации VLESS+Reality (`lib/vpn/config/config_generator.dart`)
+- Поиск бинарника sing-box и проверка при запуске (`lib/vpn/services/singbox_binary_service.dart`)
+- Менеджер процессов VPN-рантайма Windows (`lib/vpn/windows_vpn.dart`)
+- Обнаружение приложений для раздельного туннелирования (`Get-StartApps`)
+- Репозиторий серверов с CRUD/выбором и проверкой задержки
+- Логирование сессий и централизованная модель ошибок
+- Модульные тесты для генерации конфигурации и разбора статуса Windows
 
-## Project structure
+## Структура проекта
 
 ```
 lib/
@@ -36,7 +36,7 @@ test/
 assets/binaries/windows/
 ```
 
-## Notes
+## Примечания
 
-- Windows only: `wintun.dll`, `sing-box.exe` and `libcronet.dll` live in `assets/binaries/windows/`.
-- Build with `flutter build windows`.
+- Только для Windows: `wintun.dll`, `sing-box.exe` и `libcronet.dll` находятся в `assets/binaries/windows/`.
+- Сборка: `flutter build windows`.
